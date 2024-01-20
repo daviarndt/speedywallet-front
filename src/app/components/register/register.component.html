@@ -1,0 +1,54 @@
+<div class="form-container">
+    <form [formGroup]="registerForm">
+      <div class="form-group">
+        <label>First Name</label>
+        <input formControlName="firstName" type="text" class="form-control" placeholder="Enter First Name">
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input formControlName="lastName" type="text" class="form-control" placeholder="Enter Last Name">
+      </div>
+
+      <div class="form-group">
+        <label>Document</label>
+        <input formControlName="document" type="text" class="form-control" placeholder="Enter Document">
+      </div>
+
+      <hr>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+
+      <hr>
+
+      <div class="form-check">
+        <input formControlName="userType" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="COMMON">
+        <label class="form-check-label" for="flexRadioDefault1">
+          COMMON
+        </label>
+      </div>
+      <div class="form-check">
+        <input formControlName="userType" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="SHOPKEEPER">
+        <label class="form-check-label" for="flexRadioDefault2">
+          SHOPKEEPER
+        </label>
+      </div>
+      
+      <br>
+      <button (click)="register()" type="submit" class="btn btn-primary">Create Account</button>
+      <hr>
+
+      <p>Go back to Login
+        <a routerLink="/login"><strong><u>here!</u></strong></a>
+      </p>
+      </form>
+</div>
